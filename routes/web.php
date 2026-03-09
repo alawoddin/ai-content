@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsUser;
@@ -28,6 +29,10 @@ Route::prefix('admin')->middleware(['auth' ,IsAdmin::class ])->group(function ()
 Route::get('/dashboard', function () {
     return view('admin.index');
 })->name('admin.dashboard');
+
+Route::get('/logout', [AdminController::class, 'AdminLogout'])->name('admin.logout');
+
+
 
 
 });
