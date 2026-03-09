@@ -26,7 +26,7 @@ Route::prefix('admin')->middleware(['auth' ,IsAdmin::class ])->group(function ()
 
 
 Route::get('/dashboard', function () {
-    return view('admin.dashboard');
+    return view('admin.index');
 })->name('admin.dashboard');
 
 
