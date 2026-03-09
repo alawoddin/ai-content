@@ -9,9 +9,9 @@
 <div class="nk-sidebar-brand">
     <a href="index.html" class="logo-link">
         <div class="logo-wrap">
-            <img class="logo-img logo-light" src="{{ asset('backend/images/logo.png') }}" srcset="{{ asset('backend/images/logo2x.png 2x') }}" alt="">
-            <img class="logo-img logo-dark" src="{{ asset('backend/images/logo-dark.png') }}" srcset="{{ asset('backend/images/logo-dark2x.png 2x') }}" alt="">
-            <img class="logo-img logo-icon" src="{{ asset('backend/images/logo-icon.png') }}" srcset="{{ asset('backend/images/logo-icon2x.png 2x') }}" alt="">
+            <img class="logo-img logo-light" src="{{ asset('backend/images/logo.png') }}" srcset="{{ asset('backend/images/logo2x.png') }}" alt="">
+            <img class="logo-img logo-dark" src="{{ asset('backend/images/logo-dark.png') }}" srcset="{{ asset('backend/images/logo-dark2x.png') }}" alt="">
+            <img class="logo-img logo-icon" src="{{ asset('backend/images/logo-icon.png') }}" srcset="{{ asset('backend/images/logo-icon2x.png') }}" alt="">
         </div>
     </a>
 </div><!-- end nk-sidebar-brand -->
@@ -33,17 +33,17 @@
                     <span class="nk-menu-icon">
                         <em class="icon ni ni-folder-list"></em>
                     </span>
-                    <span class="nk-menu-text">Documents</span>
+                    <span class="nk-menu-text">Account</span>
                 </a>
                 <ul class="nk-menu-sub">
                     <li class="nk-menu-item">
-                        <a href="document-saved.html" class="nk-menu-link">
-                            <span class="nk-menu-text">Saved</span>
+                        <a href="{{ route('admin.profile') }}" class="nk-menu-link">
+                            <span class="nk-menu-text">Profile</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
                         <a href="document-drafts.html" class="nk-menu-link">
-                            <span class="nk-menu-text">Drafts</span>
+                            <span class="nk-menu-text">Change Password</span>
                         </a>
                     </li>
                 </ul>
@@ -99,7 +99,7 @@
         <a class="d-flex px-3 py-2 bg-primary bg-opacity-10 rounded-bottom-3" href="profile.html">
             <div class="media-group">
                 <div class="media media-sm media-middle media-circle text-bg-primary">
-                    <img src="images/avatar/a.png" />
+                    <img src="{{ (!empty($profileData->photo)) ? url('upload/admin_images/'.$profileData->photo) : url('upload/no_image.jpg') }}" />
                 </div>
                 <div class="media-text">
                     <h6 class="fs-6 mb-0"> {{ $profileData->name }}</h6>
