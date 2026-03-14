@@ -52,8 +52,8 @@ Route::get('/change/password', [AdminController::class, 'AdminChangePassword'])-
         Route::get('/add/template', 'AddTemplate')->name('add.template'); 
         Route::post('/store/template', 'StoreTemplate')->name('store.template');
 
-         Route::get('/edit/template/{id}', 'EditTemplate')->name('edit.template'); 
-         
+        Route::get('/edit/template/{id}', 'EditTemplate')->name('edit.template'); 
+        Route::post('/update/template/{id}', 'UpdateTemplate')->name('update.template'); 
     });
 
 });
