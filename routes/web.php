@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\Admin\PlanController;
+use App\Http\Controllers\Backend\Admin\TemplateController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
@@ -44,6 +45,10 @@ Route::get('/change/password', [AdminController::class, 'AdminChangePassword'])-
         Route::get('/edit/plans/{id}' , 'EditPlans')->name('edit.plans');
         Route::post('/update/plans', 'UpdatePlans')->name('update.plans');
         Route::get('/delete/plans/{id}', 'DeletePlans')->name('delete.plans');
+    });
+
+    Route::controller(TemplateController::class)->group(function() {
+        Route::get('all/template' , 'AllTemplate')->name('all.template');
     });
 
 });
