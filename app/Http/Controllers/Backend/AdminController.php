@@ -37,7 +37,7 @@ class AdminController extends Controller
 
     public function AdminProfileStore(Request $request){
      $id = Auth::user()->id;
-     $data = User::find($id);
+     $data = User::findOrFail($id);
 
      $data->name = $request->name;
      $data->email = $request->email;
