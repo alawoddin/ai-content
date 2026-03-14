@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\Admin\PlanController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
@@ -35,6 +36,10 @@ Route::get('/profile', [AdminController::class, 'AdminProfile'])->name('admin.pr
 Route::post('/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
 Route::get('/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
  Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])->name('admin.password.update');
+
+    Route::controller(PlanController::class)->group(function() {
+        Route::get('/all/plans' , 'AllPlans')->name('all.plans');
+    });
 
 });
 
