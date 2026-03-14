@@ -16,7 +16,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.login');
+        $notification = array(
+        'message' => 'Admin Paaword Updated Successfully',
+        'alert-type' => 'success'
+     );
+
+        return view('auth.login')->with($notification);
     }
 
     /**
@@ -30,9 +35,16 @@ class AuthenticatedSessionController extends Controller
 
         $user = $request->user();
 
+        $notification = array(
+        'message' => 'Admin Login Successfully',
+        'alert-type' => 'success'
+     );
+
+
         if($user->role ==='admin') {
-            return redirect()->intended('/admin/dashboard');
+            return redirect()->intended('/admin/dashboard')->with($notification);
         }
+
 
         return redirect()->intended(route('dashboard'));
     }
@@ -48,6 +60,12 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        $notification = array(
+        'message' => 'Admin Logout Successfully',
+        'alert-type' => 'success'
+     );
+
+
+        return redirect('/')->with($notification);
     }
 }

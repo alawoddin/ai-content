@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ asset('backend/images/favicon.png') }}">
     <title>Login Page  </title>
-    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css?v1.0.0') }}">
+    <link rel="stylesheet" href="{{ asset('backend/assets/css/style.css') }}">
+
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 </head>
 
 <body class="nk-body ">
@@ -19,11 +21,11 @@
                 <div class="text-center pt-5">
                     <a href="index.html" class="logo-link">
     <div class="logo-wrap">
-        <img class="logo-img logo-light" src="{{ asset('backend/images/logo.png') }}" srcset="{{ asset('backend/images/logo2x.png 2x') }}" alt="">
+        <img class="logo-img logo-light" src="{{ asset('backend/images/logo.png') }}" srcset="{{ asset('backend/images/logo2x.png') }}" alt="">
         
-        <img class="logo-img logo-dark" src="{{ asset('backend/images/logo-dark.png') }}" srcset="{{ asset('backend/images/logo-dark2x.png 2x') }}" alt="">
+        <img class="logo-img logo-dark" src="{{ asset('backend/images/logo-dark.png') }}" srcset="{{ asset('backend/images/logo-dark2x.png') }}" alt="">
 
-        <img class="logo-img logo-icon" src="{{ asset('backend/images/logo-icon.png') }}" srcset="{{ asset('backend/images/logo-icon2x.png 2x') }}" alt="">
+        <img class="logo-img logo-icon" src="{{ asset('backend/images/logo-icon.png') }}" srcset="{{ asset('backend/images/logo-icon2x.png') }}" alt="">
     </div>
                     </a>
                 </div>
@@ -86,8 +88,34 @@
             </div>
         </div>
     </div>
-    <script src="{{ asset('backend/assets/js/bundle.js?v1.0.0') }}"></script>
-    <script src="{{ asset('backend/assets/js/scripts.js?v1.0.0') }}"></script>
+    <script src="{{ asset('backend/assets/js/bundle.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/scripts.js') }}"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+ @if(Session::has('message'))
+ var type = "{{ Session::get('alert-type','info') }}"
+ switch(type){
+    case 'info':
+    toastr.info(" {{ Session::get('message') }} ");
+    break;
+
+    case 'success':
+    toastr.success(" {{ Session::get('message') }} ");
+    break;
+
+    case 'warning':
+    toastr.warning(" {{ Session::get('message') }} ");
+    break;
+
+    case 'error':
+    toastr.error(" {{ Session::get('message') }} ");
+    break; 
+ }
+ @endif 
+</script>
+
 </body>
 
 </html>
