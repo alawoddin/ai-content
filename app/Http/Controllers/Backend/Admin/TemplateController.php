@@ -13,4 +13,10 @@ class TemplateController extends Controller
         return view('admin.backend.template.all_template',compact('templates'));
     }
     //End Method 
+
+    public function AddTemplate(){
+        return view('admin.backend.template.add_template');
+    }
+    //End Method 
+    
 }

@@ -49,6 +49,7 @@ Route::get('/change/password', [AdminController::class, 'AdminChangePassword'])-
 
     Route::controller(TemplateController::class)->group(function() {
         Route::get('all/template' , 'AllTemplate')->name('all.template');
+        Route::get('/add/template', 'AddTemplate')->name('add.template'); 
     });
 
 });
