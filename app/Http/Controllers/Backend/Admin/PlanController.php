@@ -13,4 +13,31 @@ class PlanController extends Controller
 
         return view('admin.backend.plan.all_plan' , compact('plans'));
     }
+
+    //end method 
+
+    public function AddPlans() {
+        return view('admin.backend.plan.add_plan');
+    }
+    //end method 
+
+     public function StorePlans(Request $request){
+       
+        Plan::create([
+            'name' => $request->name,
+            'monthly_word_limit' => $request->monthly_word_limit,
+            'price' => $request->price,
+            'templates' => $request->templates,
+        ]);
+
+        $notification = array(
+        'message' => 'Plans Added Successfully',
+        'alert-type' => 'success'
+     );
+
+     return redirect()->route('all.plans')->with($notification);
+
+    }
+    // End Method 
+
 }
