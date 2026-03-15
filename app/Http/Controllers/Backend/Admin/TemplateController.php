@@ -8,6 +8,7 @@ use App\Models\TemplateInputFields;
 use Illuminate\Http\Request;
 use OpenAI\Laravel\Facades\OpenAI;
 use App\Models\GeneratedContent;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 class TemplateController extends Controller
@@ -210,16 +211,28 @@ class TemplateController extends Controller
 
         // SAVE DATA TO GENERATED CONTENT TABLE 
 
+        GeneratedContent::create([
+            'user_id' => $user->id,
+            'template_id' => $template->id,
+            'input' => json_encode($inputData),
+            'output' => $output,
+            'word_count' => $wordCount,
+        ]);
 
+    return response()->json([
+        'success' => true,
+        'output' => $output
+    ]);
 
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Failed to generate content: ' . $e->getMessage(),
+        ],500);
+     } 
 
-    } catch (\Throwable $th) {
-        //throw $th;
     }
-
-
-
-    }
+      //End Method 
 
 
 
