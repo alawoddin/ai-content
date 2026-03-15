@@ -133,7 +133,14 @@ class TemplateController extends Controller
         $user = Auth::user();
         return view('admin.backend.template.details_template',compact('template','user')); 
     }
-     //End Metho
+     //End Method 
+
+
+     public function AdminContentGenerate(Request $request, $id){
+
+    }
+      //End Method 
+      
 
 
 
