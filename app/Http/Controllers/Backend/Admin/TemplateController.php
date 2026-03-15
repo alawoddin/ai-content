@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Template;
 use App\Models\TemplateInputFields;
 use Illuminate\Http\Request;
+use App\Models\GeneratedContent;
 use Illuminate\Support\Facades\Auth;
 
 class TemplateController extends Controller
@@ -136,11 +137,49 @@ class TemplateController extends Controller
      //End Method 
 
 
-     public function AdminContentGenerate(Request $request, $id){
+    public function AdminContentGenerate(Request $request, $id){
+
+        // Fetch the template with its input fields
+        $template = Template::with('inputFields')->findOrFail($id);
+        $user = auth()->user();
+
+        /// Validate request 
+        $validateData = $request->validate([
+            'language' => 'required|string|in:English (USA),Bangla (Bangladesh),Hindi (India),French (France),Turkish (Turkey)',
+            'ai_model' => 'required|string|in:gpt-4,gpt-3.5-turbo',
+            'result_length' => 'required|integer|min:50|max:1000',
+        ]);
+
+         /// Validate daynamic input fields 
+        foreach($template->inputFields as $field) {
+            $fieldName = str_replace(' ','_',$field->title);
+            $request->validate([
+                $fieldName => 'required|string',
+            ]);
+        }
+
+    // Get user input for dynamic fields
+    $inputData = $request->except(['_token','language','ai_model','result_length']);
+    \Log::info('Input Data', ['inputData' => $inputData]); // Debug input data
+
+    $prompt = $template->prompt;
+
+    /// Replace placeholders with user input 
+    foreach($template->inputFields as $field) {
+         $fieldName = str_replace(' ','_',$field->title);
+         $fieldValue = $inputData[$fieldName] ?? '';
+         $prompt = str_replace('{' . str_replace(' ','_',$field->title ) . '}' , $fieldValue, $prompt);
+         $prompt = str_replace('{' . $field->title .  '}', $fieldValue, $prompt);
+    }
+
+    /// Replace result_lenght placeholder 
+    $prompt = str_replace('{result_length}', $validateData['result_length'], $prompt);
+
+        
 
     }
       //End Method 
-      
+
 
 
 
