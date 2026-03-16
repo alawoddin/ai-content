@@ -30,7 +30,7 @@ class UserController extends Controller
 
     public function UserProfileStore(Request $request){
      $id = Auth::user()->id;
-     $data = User::find($id);
+     $data = User::findOr($id);
 
      $data->name = $request->name;
      $data->email = $request->email;
@@ -68,6 +68,6 @@ class UserController extends Controller
     }
   }
    //End private Method 
-   
+
 
 }
