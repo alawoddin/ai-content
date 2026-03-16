@@ -26,6 +26,9 @@ Route::get('/dashboard', function () {
 
   Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('user.profile');
 
+  Route::post('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
+  
+
 
 
 
