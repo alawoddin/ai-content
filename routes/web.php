@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\Admin\DocumentController;
 use App\Http\Controllers\Backend\Admin\PlanController;
 use App\Http\Controllers\Backend\Admin\TemplateController;
 use App\Http\Controllers\Backend\AdminController;
@@ -48,7 +49,7 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     });
 
     Route::controller(TemplateController::class)->group(function() {
-        Route::get('all/template' , 'AllTemplate')->name('all.template');
+        Route::get('/all/template' , 'AllTemplate')->name('all.template');
         Route::get('/add/template', 'AddTemplate')->name('add.template'); 
         Route::post('/store/template', 'StoreTemplate')->name('store.template');
 
@@ -56,6 +57,10 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
         Route::post('/update/template/{id}', 'UpdateTemplate')->name('update.template');
         Route::get('/details/template/{id}', 'DetailsTemplate')->name('details.template');
         Route::post('/content/generate/{id}', 'AdminContentGenerate')->name('content.generate');
+    });
+
+    Route::controller(DocumentController::class)->group(function() {
+        Route::get('/doucment' , 'AdminDocument')->name("admin.doucment");
     });
 
 });
