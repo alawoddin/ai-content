@@ -95,7 +95,7 @@
 
 
             <li class="nk-menu-item">
-                <a href="{{ route('user.logout') }}" class="nk-menu-link">
+                <a href="{{ route('admin.logout') }}" class="nk-menu-link">
                     <span class="nk-menu-icon">
                         <em class="icon ni ni-wallet"></em>
                     </span>
