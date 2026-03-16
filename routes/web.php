@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\Admin\DocumentController;
 use App\Http\Controllers\Backend\Admin\PlanController;
 use App\Http\Controllers\Backend\Admin\TemplateController;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\Client\UserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsUser;
@@ -19,6 +20,9 @@ Route::middleware(['auth' ,IsUser::class ])->group(function () {
 Route::get('/dashboard', function () {
     return view('client.index');
 })->name('dashboard');
+
+ Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+
 
 
 });

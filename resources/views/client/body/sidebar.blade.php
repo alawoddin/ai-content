@@ -113,7 +113,7 @@
 <div class="nk-sidebar-element nk-sidebar-footer">
 <div class="nk-sidebar-footer-extended pt-3">
     <div class="border border-light rounded-3">
-        {{-- <div class="px-3 py-2 bg-white border-bottom border-light rounded-top-3">
+        <div class="px-3 py-2 bg-white border-bottom border-light rounded-top-3">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
                 <h6 class="lead-text">Free Plan</h6>
                 <a class="link link-primary" href="pricing-plans.html">
@@ -125,7 +125,7 @@
                 <div class="progress-bar" data-progress="25%"></div>
             </div>
             <h6 class="lead-text mt-2">1,360 <span class="text-light">words left</span></h6>
-        </div> --}}
+        </div>
 
     @php
         $id = Auth::user()->id;
