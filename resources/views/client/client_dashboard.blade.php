@@ -27,7 +27,7 @@
             <!-- .nk-sidebar -->
             <div class="nk-wrap">
 
-                @include('client.body.mobile')
+                @include('client.body.mobile_sidebar')
 
                 <div class="nk-content">
                     <div class="container-fluid">

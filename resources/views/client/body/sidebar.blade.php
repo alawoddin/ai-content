@@ -7,11 +7,11 @@
 </div>
 <div class="nk-sidebar-element nk-sidebar-head">
 <div class="nk-sidebar-brand">
-    <a href="{{ route('admin.dashboard') }}" class="logo-link">
+    <a href="index.html" class="logo-link">
         <div class="logo-wrap">
-            <img class="logo-img logo-light" src="{{ asset('backend/images/logo.png') }}" srcset="{{ asset('backend/images/logo2x.png') }}" alt="">
-            <img class="logo-img logo-dark" src="{{ asset('backend/images/logo-dark.png') }}" srcset="{{ asset('backend/images/logo-dark2x.png') }}" alt="">
-            <img class="logo-img logo-icon" src="{{ asset('backend/images/logo-icon.png') }}" srcset="{{ asset('backend/images/logo-icon2x.png') }}" alt="">
+            <img class="logo-img logo-light" src="{{ asset('backend/images/logo.png') }}" srcset="{{ asset('backend/images/logo2x.png 2x') }}" alt="">
+            <img class="logo-img logo-dark" src="{{ asset('backend/images/logo-dark.png') }}" srcset="{{ asset('backend/images/logo-dark2x.png 2x') }}" alt="">
+            <img class="logo-img logo-icon" src="{{ asset('backend/images/logo-icon.png') }}" srcset="{{ asset('backend/images/logo-icon2x.png 2x') }}" alt="">
         </div>
     </a>
 </div><!-- end nk-sidebar-brand -->
@@ -21,7 +21,7 @@
     <div class="nk-sidebar-menu">
         <ul class="nk-menu">
             <li class="nk-menu-item">
-                <a href="{{ route('admin.dashboard') }}" class="nk-menu-link">
+                <a href="index.html" class="nk-menu-link">
                     <span class="nk-menu-icon">
                         <em class="icon ni ni-dashboard-fill"></em>
                     </span>
@@ -37,12 +37,12 @@
                 </a>
                 <ul class="nk-menu-sub">
                     <li class="nk-menu-item">
-                        <a href="{{ route('admin.profile') }}" class="nk-menu-link">
+                        <a href="{{ route('user.profile') }}" class="nk-menu-link">
                             <span class="nk-menu-text">Profile</span>
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                         <a href="{{ route('admin.change.password') }}" class="nk-menu-link">
+                        <a href="{{ route('admin.change.password') }}" class="nk-menu-link">
                             <span class="nk-menu-text">Change Password</span>
                         </a>
                     </li>
@@ -50,52 +50,15 @@
             </li>
 
 
-            <li class="nk-menu-item has-sub">
-                <a href="#" class="nk-menu-link nk-menu-toggle">
-                    <span class="nk-menu-icon">
-                        <em class="icon ni ni-folder-list"></em>
-                    </span>
-                    <span class="nk-menu-text">Plans</span>
-                </a>
-                <ul class="nk-menu-sub">
-                    <li class="nk-menu-item">
-                        <a href="{{ route('all.plans') }}" class="nk-menu-link">
-                            <span class="nk-menu-text">All Plans</span>
-                        </a>
-                    </li>
-                    <li class="nk-menu-item">
-                        <a href="{{ route('add.plans') }}" class="nk-menu-link">
-                            <span class="nk-menu-text">Add Plans</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-
+        
            
           
             
-            <li class="nk-menu-item">
-                <a href="{{ route('all.template') }}" class="nk-menu-link">
-                    <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
-                    </span>
-                     <span class="nk-menu-text">Template</span>
-                </a>
-            </li>
-
-                   <li class="nk-menu-item">
-                <a href="{{ route('all.doucment') }}" class="nk-menu-link">
-                    <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
-                    </span>
-                     <span class="nk-menu-text">Document</span>
-                </a>
-            </li>
+      
 
 
             <li class="nk-menu-item">
-                <a href="{{ route('admin.logout') }}" class="nk-menu-link">
+                <a href="{{ route('user.logout') }}" class="nk-menu-link">
                     <span class="nk-menu-icon">
                         <em class="icon ni ni-wallet"></em>
                     </span>
@@ -146,4 +109,4 @@
     </div>
                     </div>
                 </div><!-- .nk-sidebar-element -->
-            </div><!-- .nk-sidebar -->
+            </div><!-- .nk-sidebar 

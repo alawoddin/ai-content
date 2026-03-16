@@ -19,4 +19,13 @@ class UserController extends Controller
         return redirect('/login');
     }
     //End Method 
+
+    public function UserProfile(){
+     $id = Auth::user()->id;
+     $profileData = User::find($id);
+     return view('client.user_profile',compact('profileData'));
+
+  }
+   //End Method 
+
 }

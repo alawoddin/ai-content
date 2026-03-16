@@ -14,20 +14,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-///User Route
-Route::middleware(['auth' ,IsUser::class ])->group(function () {
+/// User Routes 
+Route::middleware(['auth', IsUser::class])->group(function () {
 
 Route::get('/dashboard', function () {
     return view('client.index');
 })->name('dashboard');
 
+
  Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+
+  Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('user.profile');
+
 
 
 
 });
-
-//End User Route
+/// Eend User Routes 
 
 ///Admin Route
 Route::prefix('admin')->middleware(['auth' ,IsAdmin::class ])->group(function () {
