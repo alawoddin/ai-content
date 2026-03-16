@@ -85,7 +85,7 @@
             </li>
 
                    <li class="nk-menu-item">
-                <a href="{{ route('admin.doucment') }}" class="nk-menu-link">
+                <a href="{{ route('all.doucment') }}" class="nk-menu-link">
                     <span class="nk-menu-icon">
                         <em class="icon ni ni-user"></em>
                     </span>

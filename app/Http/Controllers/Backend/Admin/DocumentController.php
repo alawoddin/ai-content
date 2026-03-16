@@ -14,4 +14,12 @@ class DocumentController extends Controller
         return view('admin.backend.document.all_document',compact('document'));
     }
     /// End Method 
+
+     public function EditAdminDocument($id){
+        $document = GeneratedContent::findOrFail($id);
+        return view('admin.backend.document.edit_document',compact('document')); 
+    }
+    /// End Method 
+
+    
 }

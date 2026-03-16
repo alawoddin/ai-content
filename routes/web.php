@@ -60,7 +60,8 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     });
 
     Route::controller(DocumentController::class)->group(function() {
-        Route::get('/doucment' , 'AdminDocument')->name("admin.doucment");
+        Route::get('/all/doucment' , 'AdminDocument')->name("all.doucment");
+        Route::get('/edit/document/{id}', 'EditAdminDocument')->name('edit.document');
     });
 
 });
