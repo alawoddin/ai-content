@@ -62,6 +62,8 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     Route::controller(DocumentController::class)->group(function() {
         Route::get('/all/doucment' , 'AdminDocument')->name("all.doucment");
         Route::get('/edit/document/{id}', 'EditAdminDocument')->name('edit.document');
+        Route::post('/update/document/{id}', 'AdminUpdateDocument')->name('update.document'); 
+        Route::get('/delete/document/{id}', 'DeleteAdminDocument')->name('delete.document');
     });
 
 });
