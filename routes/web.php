@@ -36,6 +36,11 @@ Route::get('/dashboard', function () {
     Route::get('/user/template', 'UserTemplate')->name('user.template');
     Route::get('/user/details/template/{id}', 'UserDetailsTemplate')->name('user.details.template');
     Route::post('/user/content/generate/{id}', 'UserContentGenerate')->name('user.content.generate');
+
+
+    ///user document route
+
+    Route::get('/user/document', 'UserDocument')->name('user.document');
     
   });
 
