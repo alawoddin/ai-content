@@ -33,7 +33,8 @@ Route::get('/dashboard', function () {
 
 
   Route::controller(UserTemplateController::class)->group(function(){
-    Route::get('/user/template', 'UserTemplate')->name('user.template'); 
+    Route::get('/user/template', 'UserTemplate')->name('user.template');
+    Route::get('/user/details/template/{id}', 'UserDetailsTemplate')->name('user.details.template');
     
   });
 
