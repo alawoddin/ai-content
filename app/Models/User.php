@@ -19,7 +19,7 @@ class User extends Authenticatable
      */
     protected $guarded = [];
 
-     public function plan(){
+    public function plan(){
         return $this->belongsTo(Plan::class,'plan_id');
     }
     
