@@ -37,7 +37,7 @@
 <div class="nk-editor-header">
     <div class="nk-editor-title">
         <h4 class="me-3 mb-0 line-clamp-1">
-            {{ json_decode($document->input,true)['Article_Title?'] }}
+             {{ json_decode($document->input,true)['Article_Title?'] ?? json_decode($document->input,true)['Topic'] ?? 'Document' }}
         </h4> 
     </div>
 
