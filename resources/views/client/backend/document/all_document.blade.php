@@ -66,10 +66,10 @@
                 <div class="badge text-bg-success-soft rounded-pill px-2 py-1 fs-6 lh-sm"> {{ $item->word_count }}</div>
             </td> 
 
-            {{-- <td class="tb-col tb-col-sm">
-        <a href="{{ route('edit.admin.document',$item->id) }}" class="btn btn-success btn-sm">Edit</a>  
-         <a href="{{ route('delete.admin.document',$item->id) }}" class="btn btn-danger btn-sm" id="delete">Delete</a>          
-            </td> --}}
+            <td class="tb-col tb-col-sm">
+        <a href="{{ route('edit.user.document',$item->id) }}" class="btn btn-success btn-sm">Edit</a>  
+         {{-- <a href="{{ route('delete.admin.document',$item->id) }}" class="btn btn-danger btn-sm" id="delete">Delete</a>           --}}
+            </td>
             
         </tr>
        @endforeach
