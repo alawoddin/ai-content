@@ -29,7 +29,7 @@
                     <p><strong>Your Blanace Is {{ $user->current_word_usage - $user->words_used }} Words Left </strong></p> 
                 </div>
 
- <form id="generateForm" action="{{ route('content.generate',$template->id) }}" method="post" enctype="multipart/form-data">
+ <form id="generateForm" action="{{ route('user.content.generate',$template->id) }}" method="post" enctype="multipart/form-data">
      @csrf  
 
     <div class="form-group">
@@ -37,10 +37,8 @@
             <div class="form-control-wrap">
      <select name="language" class="form-select" id="language" > 
         <option value="English (USA)">English (USA)</option>
-        <option value="Bangla (Bangladesh)">Bangla (Bangladesh)</option>
-        <option value="Hindi (India)">Hindi (India)</option>
-        <option value="French (France)">French (France)</option>
-        <option value="Turkish (Turkey)">Turkish (Turkey)</option> 
+        <option value="Pashto (Pashto)">Pashto (Pashto)</option>
+        <option value="Persian (Persian)">Persian (Persian)</option>
     </select>
             </div>
     </div>  
