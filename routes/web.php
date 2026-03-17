@@ -43,6 +43,7 @@ Route::get('/dashboard', function () {
     Route::get('/user/document', 'UserDocument')->name('user.document');
     Route::get('/edit/user/document/{id}', 'EditUserDocument')->name('edit.user.document'); 
     Route::post('/user/update/document/{id}', 'UserUpdateDocument')->name('user.update.document');
+    Route::get('/delete/user/document/{id}', 'DeleteUserDocument')->name('delete.user.document');
     
   });
 
