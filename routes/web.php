@@ -50,6 +50,8 @@ Route::get('/dashboard', function () {
 
   Route::controller(CheckoutController::class)->group(function(){
     Route::get('/user/checkout', 'UserCheckout')->name('user.checkout'); 
+    Route::post('/user/process/checkout', 'UserProcessCheckout')->name('user.process.checkout'); 
+    Route::get('/payment/success', 'PaymentSuccess')->name('payment.success');
    
     
   });
