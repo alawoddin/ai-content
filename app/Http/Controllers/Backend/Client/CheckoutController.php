@@ -59,5 +59,5 @@ class CheckoutController extends Controller
      }
      // End Method 
 
-     
+
 }

@@ -47,20 +47,7 @@
         <input type="text" name="account_number" class="form-control">
     </div>
 
-        <div class="form-group mb-3">
-        <label for="bank_name">Bank Name</label>
-        <input type="text" name="bank_name" class="form-control">
-    </div>
 
-     <div class="form-group mb-3">
-        <label for="account_holder">Account Holder Name</label>
-        <input type="text" name="account_holder" class="form-control">
-    </div>
-
-     <div class="form-group mb-3">
-        <label for="account_number">Account Number</label>
-        <input type="text" name="account_number" class="form-control">
-    </div>
 
 
 
