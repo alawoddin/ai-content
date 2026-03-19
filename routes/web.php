@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\Admin\DocumentController;
 use App\Http\Controllers\Backend\Admin\PlanController;
 use App\Http\Controllers\Backend\Admin\TemplateController;
 use App\Http\Controllers\Backend\AdminController;
+use App\Http\Controllers\Backend\Client\CheckoutController;
 use App\Http\Controllers\Backend\Client\UserController;
 use App\Http\Controllers\Backend\Client\UserTemplateController;
 use App\Http\Controllers\ProfileController;
@@ -46,6 +47,13 @@ Route::get('/dashboard', function () {
     Route::get('/delete/user/document/{id}', 'DeleteUserDocument')->name('delete.user.document');
     
   });
+
+  Route::controller(CheckoutController::class)->group(function(){
+    Route::get('/user/checkout', 'UserCheckout')->name('user.checkout'); 
+   
+    
+  });
+
 
   
 
