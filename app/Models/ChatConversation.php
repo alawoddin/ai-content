@@ -9,7 +9,7 @@ class ChatConversation extends Model
     protected $guarded = [];
 
     public function assistant(){
-        return $this->belongsTo(ChatAssistan::class);
+        return $this->belongsTo(ChatAssistant::class);
     }
 
     public function user(){
