@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\Admin\DocumentController;
+use App\Http\Controllers\Backend\Admin\OrderController;
 use App\Http\Controllers\Backend\Admin\PlanController;
 use App\Http\Controllers\Backend\Admin\TemplateController;
 use App\Http\Controllers\Backend\AdminController;
@@ -53,8 +54,8 @@ Route::get('/dashboard', function () {
     Route::post('/user/process/checkout', 'UserProcessCheckout')->name('user.process.checkout'); 
     Route::get('/payment/success', 'PaymentSuccess')->name('payment.success');
 
-     Route::get('/invoice/generate/{id}', 'InvoiceGenerate')->name('invoice.generate');
-     
+    Route::get('/invoice/generate/{id}', 'InvoiceGenerate')->name('invoice.generate');
+
    
     
   });
@@ -107,6 +108,11 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
         Route::get('/edit/document/{id}', 'EditAdminDocument')->name('edit.document');
         Route::post('/update/document/{id}', 'AdminUpdateDocument')->name('update.document'); 
         Route::get('/delete/document/{id}', 'DeleteAdminDocument')->name('delete.document');
+    });
+
+    Route::controller(OrderController::class)->group(function() {
+        Route::get('all/order' , 'AllOrder')->name('all.order');
+
     });
 
 });
