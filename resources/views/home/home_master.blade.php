@@ -6,7 +6,7 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{ asset('frontend/images/favicon.png') }}">
-    <title>EasyGen - AI Writer SaaS Application.</title>
+    <title>AI Writer SaaS Application.</title>
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
 </head>
 
