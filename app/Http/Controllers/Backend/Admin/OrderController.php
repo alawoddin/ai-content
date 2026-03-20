@@ -13,4 +13,22 @@ class OrderController extends Controller
       return view('admin.backend.order.all_order',compact('allData'));
    }
      //End Method
+
+      public function UpdateOrderStatus($id){
+      $billing = billingHistory::findOrFail($id);
+
+      $billing->status = 'Paid';
+      $billing->save();
+
+      $notification = array(
+        'message' => 'Status Updated Successfully',
+        'alert-type' => 'Success'
+     );
+
+     return redirect()->back()->with($notification);
+
+   }
+   //End Method 
+
+
 }

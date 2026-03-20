@@ -112,6 +112,7 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
 
     Route::controller(OrderController::class)->group(function() {
         Route::get('all/order' , 'AllOrder')->name('all.order');
+        Route::get('/update/order/status/{id}', 'UpdateOrderStatus')->name('update.order.status'); 
 
     });
 
