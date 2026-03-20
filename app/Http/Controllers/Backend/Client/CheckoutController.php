@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\BillingHistory;
+use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Plan;
 use Illuminate\Http\Request;
 
