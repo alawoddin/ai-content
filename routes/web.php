@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\Admin\ChatController;
 use App\Http\Controllers\Backend\Admin\DocumentController;
 use App\Http\Controllers\Backend\Admin\OrderController;
 use App\Http\Controllers\Backend\Admin\PlanController;
@@ -115,6 +116,13 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
         Route::get('/update/order/status/{id}', 'UpdateOrderStatus')->name('update.order.status'); 
 
     });
+
+     Route::controller(ChatController::class)->group(function(){
+        Route::get('/all/assistants', 'AllAssistants')->name('all.assistants'); 
+    
+     
+  });
+
 
 });
 
