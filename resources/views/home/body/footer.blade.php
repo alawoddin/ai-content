@@ -47,7 +47,7 @@
                                 </a>
                                 <h4 class="title">Save time. Get inspired.</h4>
                                 <p>Automatically genarate blog articles, website copy, landing pages &amp; digital ads for your business in seconds. Unleash the most advanced AI writer to boost your traffic and productitvity. </p>
-                                <p class="text-heading mt-4">&copy; 2026 alawoddin khedmat. Template Made By <a target="_blank" href="https://saas-project.khedmat.website/">EasyGen</a> </p>
+                                <p class="text-heading mt-4">&copy; 2026 alawoddin khedmat. Template Made By <a target="_blank" href="https://saas-project.khedmat.website/">khedmat</a> </p>
                             </div>
                         </div>
                     </div>
