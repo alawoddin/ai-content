@@ -24,6 +24,12 @@ class User extends Authenticatable
     }
     
 
+     public function billingHistories(){
+        return $this->hasMany(billingHistory::class);
+    }
+
+
+
     /**
      * The attributes that should be hidden for serialization.
      *
