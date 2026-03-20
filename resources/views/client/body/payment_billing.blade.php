@@ -12,7 +12,7 @@
 
     $nextDueDate = $lastBilling
         ? \Carbon\Carbon::parse($lastBilling->payment_date)->addMonth()->format('M d, Y')
-        : now()->addMonth()->format('M d, Y'); // ✅ FIXED
+        : now()->addMonth()->format('M d, Y'); 
 
     /// Default payment method 
     $paymentMethod = $profileData->payment_method ?? 'Bank Transfer';
@@ -117,7 +117,7 @@
             <div class="badge text-bg-success-soft rounded-pill px-2 py-1 fs-6 lh-sm">{{ $billing->status }}</div>
         </td>
         <td class="tb-col tb-col-end">
-            <a href="#" class="link">Get Invoice</a>
+            <a href="{{ route('invoice.generate',$billing->id) }}" class="link">Get Invoice</a>
         </td>
     </tr>
 

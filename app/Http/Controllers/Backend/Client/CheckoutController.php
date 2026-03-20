@@ -59,5 +59,14 @@ class CheckoutController extends Controller
      }
      // End Method 
 
+     public function InvoiceGenerate($id){
+        $billing = BillingHistory::with('user','plan')->findOrFail($id);
+        $pdf = pdf::loadView('client.backend.checkout.invoice',compact('billing'));
+        return $pdf->download('invoice-' . $billing->id . '.pdf'); //invoice3.pdf
+     }
+      // End Method 
+
+
+
 
 }
