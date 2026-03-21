@@ -72,6 +72,25 @@ User Dashboard
 [...](https://saas-project.khedmat.website/)
 
 
+
+## Installed Packages
+
+The following Laravel packages are used in this project:
+
+📄 barryvdh/laravel-dompdf — Generate PDF reports
+🖼 intervention/image — Image processing and manipulation
+🤖 openai-php/laravel — OpenAI API integration
+
+## Install Dependencies
+
+Run the following commands:
+
+composer require barryvdh/laravel-dompdf
+composer require intervention/image
+composer require openai-php/laravel
+
+
+
 ##  Installation
 
 
