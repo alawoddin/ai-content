@@ -1,59 +1,105 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# AI Content Generator (SaaS)
+AI SaaS Content Platform
+Overview
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+AI SaaS Content Platform is a full-stack web application built with Laravel and MySQL that allows users to generate AI-powered content through an intuitive dashboard.
 
-## About Laravel
+The platform includes both user and admin dashboards, enabling scalable content generation, user management, and AI assistant configuration.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This project demonstrates real-world SaaS architecture with authentication, role-based access, and API integration.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Overview
+...
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+the saas web application is create for the user have mutiple choose that select with category chatgpt use
 
-## Learning Laravel
+## Features
+Admin Dashboard
+👥 User management system
+🤖 Manage AI chat assistants
+⚙️ Configure system settings
+📈 Monitor user activity
+🗂 Content management overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+User Dashboard
+🔐 Secure Authentication (Login/Register)
+🤖 AI Content Generation (OpenAI API)
+📝 Generate blogs, articles, and text content
+📂 Save and manage generated content
+📊 User-friendly dashboard interface
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Core System Features
+Role-Based Access Control (Admin / User)
+RESTful API architecture
+Scalable SaaS structure
+Clean and maintainable codebase
 
-## Laravel Sponsors
+## Tech Stack
+Backend: Laravel (PHP)
+Frontend: Blade / (or React if applicable)
+Database: MySQL
+API Integration: OpenAI API
+Authentication: Laravel Auth
+Version Control: Git & GitHub
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Screenshots
 
-### Premium Partners
+![Frontend](./screenshots/frotend.png)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
 
-## Contributing
+![login](./screenshots//login.png)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![Admin Dashboard](./screenshots/admin_dashbaord.png)
 
-## Security Vulnerabilities
+User Dashboard
+![User Dashboard](./screenshots/user_dashboard.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+🔹 AI Content Generator
+![Ai-content](./screenshots/ai_content.png)
+
+
+
+
+🔹 Chat Assistants Management
+![Chat Assistant](./screenshots/chat_assistants.png)
+
+
+## Live Demo
+[...](https://saas-project.khedmat.website/)
+
+
+##  Installation
+
+
+1️⃣ Clone the repository
+git clone https://github.com/alawoddin/ai-content.git
+cd ai-content
+2️⃣ Install dependencies
+composer install
+npm install
+3️⃣ Setup environment
+cp .env.example .env
+php artisan key:generate
+4️⃣ Configure database
+
+Update your .env file:
+
+DB_DATABASE=your_database
+DB_USERNAME=root
+DB_PASSWORD=
+5️⃣ Run migrations
+php artisan migrate
+6️⃣ Start development server
+php artisan serve
+npm run dev
+
+
+## Environment Variables
+
+Add your OpenAI API key:
+
+OPENAI_API_KEY=your_api_key_here
