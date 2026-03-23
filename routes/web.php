@@ -124,6 +124,7 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     
         Route::get('/chat-assistants/chat/{assistantId}', 'ChatAssistants')->name('chat-assistants.chat');
         Route::post('/chat-assistants/send/{assistantId}', 'ChatSendMessage')->name('chat-assistants.send');
+        Route::get('/chat-assistants/new/{assistantId}', 'StartNewConversation')->name('chat-assistants.new');
   });
 
 
