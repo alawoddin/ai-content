@@ -70,8 +70,8 @@
             </div>
 
         <div class="card-footer bg-white border-top">
-            <form action="" method="post" class="input-group">
-                @csrf
+             <form action="{{ route('chat-assistants.send',['assistantId' => $assistant->id]) }}" method="post" class="input-group">
+            @csrf
             <input type="text" name="message" class="form-control border-secondary" placeholder="Type your message.." required>
             <button type="submit" class="btn btn-primary">Send</button>
             </form> 
