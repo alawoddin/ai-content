@@ -122,7 +122,7 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
         Route::get('/add/assistants', 'AddAssistants')->name('add.assistants'); 
         Route::post('/chat-assistants/store', 'StoreAssistants')->name('chat-assistants.store'); 
     
-     
+        Route::get('/chat-assistants/chat/{assistantId}', 'ChatAssistants')->name('chat-assistants.chat');
   });
 
 
