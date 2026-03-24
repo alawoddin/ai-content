@@ -70,5 +70,14 @@ class HeadingController extends Controller
 
    }
 
+   public function UpdateStarted(Request $request, $id){
+        $heading = Heading::findOrFail($id);
+        $heading->update($request->only(['title','description']));
+        return response()->json(['success' => true, 'message' => 'Updated Successfully']); 
+    }
+    //End Method 
+
+    
+
 
 }

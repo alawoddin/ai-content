@@ -143,9 +143,15 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     Route::get('/edit/heading/{id}' , 'EditHeading')->name('edit.heading');
     Route::post('/update/heading', 'UpdateHeading')->name('update.heading');
     Route::get('/delete/heading/{id}', 'DeleteHeading')->name('delete.heading');
+
+
+  
     
     
   });
+
+
+
 
 
 
@@ -159,6 +165,7 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
 /////////// Assess for All ///////////////////
  Route::post('/update-slider/{id}', [HomeController::class, 'UpdateSliders']);
  Route::post('/update-slider-image/{id}', [HomeController::class, 'UpdateSliderImage']);
+ Route::post('/update-started/{id}', [HeadingController::class, 'UpdateStarted']);
 
 
 
