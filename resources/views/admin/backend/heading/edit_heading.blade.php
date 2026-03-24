@@ -21,7 +21,7 @@
         <div class="card shadown-none">
             <div class="card-body">
      
-     <form action="{{ route('store.heading') }}" method="post" enctype="multipart/form-data">
+     <form action="{{ route('update.heading') }}" method="post" enctype="multipart/form-data">
         @csrf   
         <input type="hidden" name="id" value="{{ $headings->id }}">
 

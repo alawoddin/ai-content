@@ -41,5 +41,34 @@ class HeadingController extends Controller
     return view('admin.backend.heading.edit_heading' , compact('headings'));
    }
 
+   public function UpdateHeading(Request $request) {
+    $heading_id = $request->id;
+
+    Heading::findOr($heading_id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+           
+           ]);
+
+     $notification = array(
+        'message' => 'Heading is  Updated Successfully',
+        'alert-type' => 'success'
+     ); 
+     return redirect()->route('all.heading')->with($notification); 
+
+
+   }
+
+   public function DeleteHeading($id) {
+    Heading::findOrFail($id)->delete();
+
+    $notification = array(
+        'message' => 'Heading is  Delete Successfully',
+        'alert-type' => 'success'
+     ); 
+     return redirect()->route('all.heading')->with($notification); 
+
+   }
+
 
 }
