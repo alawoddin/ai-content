@@ -140,6 +140,9 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     Route::get('/all/heading', 'AllHeading')->name('all.heading'); 
     Route::get('/add/heading', 'AddHeading')->name('add.heading');
     Route::post('/store/heading', 'StoreHeading')->name('store.heading'); 
+    Route::get('/edit/heading/{id}' , 'EditHeading')->name('edit.heading');
+    Route::post('/update/heading', 'UpdateHeading')->name('update.heading');
+    Route::get('/delete/heading/{id}', 'DeleteHeading')->name('delete.heading');
     
     
   });

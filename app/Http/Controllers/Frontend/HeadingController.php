@@ -35,5 +35,11 @@ class HeadingController extends Controller
    }
    //End Method 
 
-   
+   public function EditHeading($id) {
+    $headings = Heading::findOr($id);
+
+    return view('admin.backend.heading.edit_heading' , compact('headings'));
+   }
+
+
 }
