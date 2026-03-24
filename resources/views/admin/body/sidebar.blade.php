@@ -53,9 +53,9 @@
             <li class="nk-menu-item has-sub">
                 <a href="#" class="nk-menu-link nk-menu-toggle">
                     <span class="nk-menu-icon">
-                        <em class="icon ni ni-folder-list"></em>
-                    </span>
-                    <span class="nk-menu-text">Plans</span>
+    <em class="icon ni ni-box"></em>
+</span>
+<span class="nk-menu-text">Plans</span>
                 </a>
                 <ul class="nk-menu-sub">
                     <li class="nk-menu-item">
@@ -77,17 +77,17 @@
             
             <li class="nk-menu-item">
                 <a href="{{ route('all.template') }}" class="nk-menu-link">
-                    <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
-                    </span>
-                     <span class="nk-menu-text">Template</span>
+<span class="nk-menu-icon">
+    <em class="icon ni ni-layers"></em>
+</span>
+<span class="nk-menu-text">Template</span>
                 </a>
             </li>
 
                    <li class="nk-menu-item">
                 <a href="{{ route('all.doucment') }}" class="nk-menu-link">
                     <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
+                        <em class="icon ni ni-file-docs"></em>
                     </span>
                      <span class="nk-menu-text">Document</span>
                 </a>
@@ -95,32 +95,32 @@
 
                   <li class="nk-menu-item">
                 <a href="{{ route('all.order') }}" class="nk-menu-link">
-                    <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
-                    </span>
-                     <span class="nk-menu-text">Orders</span>
+                   <span class="nk-menu-icon">
+    <em class="icon ni ni-cart"></em>
+</span>
+<span class="nk-menu-text">Orders</span>
                 </a>
             </li>
 
              <li class="nk-menu-item">
                 <a href="{{ route('all.assistants') }}" class="nk-menu-link">
                     <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
-                    </span>
-                    <span class="nk-menu-text">Chat Assistants</span>
+    <em class="icon ni ni-chat"></em>
+</span>
+<span class="nk-menu-text">Chat Assistants</span>
                 </a>
             </li>
 
                <li class="nk-menu-item">
                 <a href="{{ route('home.slider') }}" class="nk-menu-link">
                     <span class="nk-menu-icon">
-                        <em class="icon ni ni-user"></em>
-                    </span>
-                    <span class="nk-menu-text">Setup Slider</span>
+    <em class="icon ni ni-setting-alt"></em>
+</span>
+<span class="nk-menu-text">Setup Slider</span>
                 </a>
             </li>
 
-            
+
 
 
 
