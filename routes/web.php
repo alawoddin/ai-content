@@ -142,12 +142,11 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
 
 //End Admin  Route 
 
-
 /////////// Assess for All ///////////////////
  Route::post('/update-slider/{id}', [HomeController::class, 'UpdateSliders']);
  Route::post('/update-slider-image/{id}', [HomeController::class, 'UpdateSliderImage']);
 
- 
+
 
 
 
