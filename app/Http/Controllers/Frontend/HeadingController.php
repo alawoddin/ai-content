@@ -13,4 +13,27 @@ class HeadingController extends Controller
     return view('admin.backend.heading.all_heading',compact('heading'));
    }
    //End Method
+
+   public function AddHeading(){
+    
+    return view('admin.backend.heading.add_heading');
+   }
+   //End Method 
+
+   public function StoreHeading(Request $request){
+        Heading::create([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+
+    $notification = array(
+        'message' => 'Heading Inserted Successfully',
+        'alert-type' => 'success'
+     ); 
+     return redirect()->route('all.heading')->with($notification); 
+
+   }
+   //End Method 
+
+   
 }
