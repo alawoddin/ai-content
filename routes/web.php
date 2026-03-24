@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\Client\CheckoutController;
 use App\Http\Controllers\Backend\Client\UserController;
 use App\Http\Controllers\Backend\Client\UserTemplateController;
+use App\Http\Controllers\Frontend\HeadingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
@@ -134,6 +135,14 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     Route::post('/update/slider', 'UpdateSlider')->name('update.slider');
     
   });
+
+    Route::controller(HeadingController::class)->group(function(){
+    Route::get('/all/heading', 'AllHeading')->name('all.heading'); 
+    
+    
+  });
+
+
 
 
 
