@@ -121,6 +121,16 @@ class HomeController extends Controller
 
    
 
+     public function Contact(){
+    return view('home.page.contact');
+   }
+   //End Method 
+   
+   
+
+
+
+
 
 
 
