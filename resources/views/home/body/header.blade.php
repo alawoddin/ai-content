@@ -5,7 +5,7 @@
     <div class="container">
         <div class="nk-header-wrap">
             <div class="nk-header-logo">
-                <a href="index.html" class="logo-link">
+                <a href="{{ url('/') }}" class="logo-link">
                     <div class="logo-wrap">
                         <img class="logo-img logo-light" src="{{ asset('frontend/images/logo.png') }}" srcset="{{ asset('frontend/images/logo2x.png') }}" alt="">
                         <img class="logo-img logo-dark" src="{{ asset('frontend/images/logo-dark.png') }}" srcset="{{ asset('frontend/images/logo-dark2x.png') }}" alt="">
@@ -40,7 +40,7 @@
                     </li>
                 
                     <li class="nk-menu-item">
-                        <a href="pricing.html" class="nk-menu-link">
+                         <a href="{{ route('pricing') }}" class="nk-menu-link">
                             <span class="nk-menu-text">Pricing</span>
                         </a>
                     </li>

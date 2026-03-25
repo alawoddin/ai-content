@@ -114,6 +114,13 @@ class HomeController extends Controller
    }
    //End Method
 
+     public function Pricing(){
+    return view('home.page.pricing');
+   }
+   //End Method 
+
+   
+
 
 
 
