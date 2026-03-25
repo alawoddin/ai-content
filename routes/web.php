@@ -175,9 +175,10 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
    ///////////// HOME FRONTEND //////////
 
 Route::controller(HomeController::class)->group(function(){
-    Route::get('/usecase', 'UseCase')->name('usecase');  
+    Route::get('/usecase', 'UseCase')->name('usecase');
+    Route::get('/features', 'Features')->name('features');   
   });
-  
+
 
 
 
