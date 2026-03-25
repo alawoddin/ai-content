@@ -103,6 +103,13 @@ class HomeController extends Controller
     }
      //End Method 
 
+      public function UseCase(){
+    return view('home.page.use_case');
+   }
+   //End Method 
+
+   
+
      
 
 

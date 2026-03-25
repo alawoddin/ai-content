@@ -172,6 +172,14 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
  Route::post('/update-started/{id}', [HeadingController::class, 'UpdateStarted']);
 
 
+   ///////////// HOME FRONTEND //////////
+
+Route::controller(HomeController::class)->group(function(){
+    Route::get('/usecase', 'UseCase')->name('usecase');  
+  });
+  
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
