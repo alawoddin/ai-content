@@ -134,6 +134,10 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
   Route::controller(HomeController::class)->group(function(){
     Route::get('/home/slider', 'HomeSlider')->name('home.slider'); 
     Route::post('/update/slider', 'UpdateSlider')->name('update.slider');
+
+    Route::get('/contact/message', 'ContactMessage')->name('contact.message');
+    Route::get('/delete/contact/message/{id}', 'DeleteContactMessage')->name('delete.contact.message');
+
     
   });
 
@@ -179,6 +183,10 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/features', 'Features')->name('features'); 
     Route::get('/pricing', 'Pricing')->name('pricing');  
     Route::get('/contact', 'Contact')->name('contact');
+
+
+    Route::post('/store/contact', 'StoreContact')->name('store.contact');
+
   });
 
 

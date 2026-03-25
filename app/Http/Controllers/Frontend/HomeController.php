@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Intervention\Image\ImageManager;
@@ -125,7 +126,47 @@ class HomeController extends Controller
     return view('home.page.contact');
    }
    //End Method 
-   
+
+   public function StoreContact(Request $request){
+        
+    Contact::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'subject' => $request->subject,
+            'message' => $request->message,
+            
+        ]);
+
+    $notification = array(
+        'message' => 'Contact Inserted Successfully',
+        'alert-type' => 'success'
+     ); 
+     return redirect()->back()->with($notification); 
+
+   }
+   //End Method 
+
+    public function ContactMessage(){
+    $contact =  Contact::orderBy('id','desc')->get();
+    return view('admin.backend.contact.all_contact',compact('contact'));
+   }
+    //End Method 
+
+    public function DeleteContactMessage($id){
+
+        Contact::findOr($id)->delete();
+
+        $notification = array(
+        'message' => 'Contact Deleted Successfully',
+        'alert-type' => 'success'
+     ); 
+     return redirect()->back()->with($notification);  
+    }
+     //End Method 
+
+
+
+
    
 
 
