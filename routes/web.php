@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\Client\UserController;
 use App\Http\Controllers\Backend\Client\UserTemplateController;
 use App\Http\Controllers\Frontend\HeadingController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\QuestionsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsUser;
@@ -61,6 +62,10 @@ Route::get('/dashboard', function () {
 
     
   });
+
+ 
+
+
 
 
 
@@ -142,6 +147,15 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
  
     
   });
+
+    Route::controller(QuestionsController::class)->group(function(){
+    Route::get('/all/questions', 'AllQuestions')->name('all.questions'); 
+    Route::get('/add/questions', 'AddQuestions')->name('add.questions');
+    Route::post('/store/questions', 'StoreQuestions')->name('store.questions'); 
+     
+  });
+
+
 
 
 

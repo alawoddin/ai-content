@@ -134,16 +134,12 @@
                         </a>
                     </li>
                     <li class="nk-menu-item">
-                        <a href="{{ route('add.plans') }}" class="nk-menu-link">
-                            <span class="nk-menu-text">Add Plans</span>
+                        <a href="{{ route('all.questions') }}" class="nk-menu-link">
+                            <span class="nk-menu-text">All Questions</span>
                         </a>
                     </li>
                 </ul>
             </li>
-
-            
-
-
 
 
 
