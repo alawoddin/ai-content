@@ -30,7 +30,7 @@ class CheckoutController extends Controller
         $user = Auth::user();
         $newPlan = Plan::find($request->plan_id);
 
-        BillingHistory::create([
+        billingHistory::create([
             'user_id' => $user->id,
             'plan_id' => $newPlan->id,
             'payment_date' => now(),
