@@ -182,6 +182,11 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
  Route::post('/update-started/{id}', [HeadingController::class, 'UpdateStarted']);
 
 
+ Route::controller(GenerateController::class)->group(function(){
+    Route::post('/generate-save-image', 'GenerateAndSaveImage');  
+  });
+  
+
    ///////////// HOME FRONTEND //////////
 
 Route::controller(HomeController::class)->group(function(){
