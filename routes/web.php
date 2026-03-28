@@ -64,6 +64,14 @@ Route::get('/dashboard', function () {
     
   });
 
+
+   Route::controller(GenerateController::class)->group(function(){
+    Route::get('/user/generate/image', 'UserGenerateImage')->name('user.generate.image'); 
+    Route::get('/user/all/generate/image', 'UserAllGenerateImage')->name('user.all.generate.image'); 
+   
+  });
+  
+
  
 
 
