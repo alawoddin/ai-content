@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\Admin\ChatController;
 use App\Http\Controllers\Backend\Admin\DocumentController;
+use App\Http\Controllers\Backend\Admin\GenerateController;
 use App\Http\Controllers\Backend\Admin\OrderController;
 use App\Http\Controllers\Backend\Admin\PlanController;
 use App\Http\Controllers\Backend\Admin\TemplateController;
@@ -160,6 +161,11 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
     Route::post('/update/questions', 'UpdateQuestions')->name('update.questions');
     Route::get('/delete/questions/{id}', 'DeleteQuestions')->name('delete.questions'); 
      
+  });
+
+  Route::controller(GenerateController::class)->group(function(){
+    Route::get('/generate/image', 'GenerateImage')->name('generate.image'); 
+   
   });
 
 
