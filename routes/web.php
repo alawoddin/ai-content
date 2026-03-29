@@ -178,12 +178,13 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
    
   });
 
-     Route::controller(GenerateController::class)->group(function(){
+  Route::controller(GenerateController::class)->group(function(){
     Route::get('/generate/audio', 'GenerateAudio')->name('generate.audio'); 
+    // Route::post('/generate-audio', 'GenerateAndSaveAudio'); 
     // Route::get('/all/generate/image', 'AllGenerateImage')->name('all.generate.image'); 
    
   });
-  
+
 
 
 
@@ -201,6 +202,7 @@ Route::post('/password/update', [AdminController::class, 'AdminPasswordUpdate'])
 
  Route::controller(GenerateController::class)->group(function(){
     Route::post('/generate-save-image', 'GenerateAndSaveImage'); 
+    Route::post('/generate-audio', 'GenerateAndSaveAudio'); 
   });
 
 
