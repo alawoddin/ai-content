@@ -86,6 +86,12 @@ class GenerateController extends Controller
     }
     // End Method
 
+
+     public function GenerateAudio(){
+        return view('admin.backend.generate.generate_audio');
+    }
+    // End Methodc
+
     
 
 
