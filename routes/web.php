@@ -70,6 +70,13 @@ Route::get('/dashboard', function () {
     Route::get('/user/all/generate/image', 'UserAllGenerateImage')->name('user.all.generate.image'); 
    
   });
+
+  Route::controller(GenerateController::class)->group(function(){
+    Route::get('/user/generate/audio', 'UserGenerateAudio')->name('user.generate.audio'); 
+    Route::get('/user/all/generate/audio', 'UserAllGenerateAudio')->name('user.all.generate.audio'); 
+   
+  });
+  
   
 
  
