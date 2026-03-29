@@ -13,10 +13,10 @@
 <body class="nk-body " data-menu-collapse="lg">
     <div class="nk-app-root ">
 
-       @include('home.body.header')
+        @include('home.body.header')
 
         <main class="nk-pages">
-         @yield('home')  
+            @yield('home')
         </main>
         @include('home.body.footer')
     </div>
