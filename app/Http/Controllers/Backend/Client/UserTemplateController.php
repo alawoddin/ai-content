@@ -160,7 +160,7 @@ class UserTemplateController extends Controller
 
       public function DeleteUserDocument($id){
 
-        GeneratedContent::find($id)->delete();
+        GeneratedContent::findOr($id)->delete();
         $notification = array(
         'message' => 'Document Deleted Successfully',
         'alert-type' => 'success'
