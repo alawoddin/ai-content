@@ -1,5 +1,13 @@
 @extends('admin.dashboard')
 @section('admin')
+
+@php
+    $templates = \App\Models\Template::latest()->get();
+@endphp
+
+
+
+
     <div class="nk-content-inner">
         <div class="nk-content-body">
             <div class="nk-block-head nk-page-head">
@@ -82,56 +90,26 @@
             </div><!-- .nk-block-head -->
             <div class="nk-block">
                 <div class="row g-gs">
-                    <div class="col-sm-6 col-xxl-3">
-                        <div class="card card-full">
-                            <div class="card-body">
-                                <div
-                                    class="media media-rg media-middle media-circle text-primary bg-primary bg-opacity-20 mb-3">
-                                    <em class="icon ni ni-bulb-fill"></em>
-                                </div>
-                                <h5 class="fs-4 fw-medium">Blog Ideas</h5>
-                                <p class="small text-light">Produce trendy blog ideas for your business that engages.</p>
-                            </div>
-                        </div><!-- .card -->
-                    </div><!-- .col -->
-                    <div class="col-sm-6 col-xxl-3">
-                        <div class="card card-full">
-                            <div class="card-body">
-                                <div class="position-absolute end-0 top-0 me-4 mt-4">
-                                    <div class="badge text-bg-dark rounded-pill text-uppercase">New</div>
-                                </div>
-                                <div class="media media-rg media-middle media-circle text-blue bg-blue bg-opacity-20 mb-3">
-                                    <em class="icon ni ni-spark-fill"></em>
-                                </div>
-                                <h5 class="fs-4 fw-medium">Social Media Posts</h5>
-                                <p class="small text-light">Creative and engaging social media post for your brand.</p>
-                            </div>
-                        </div><!-- .card -->
-                    </div><!-- .col -->
-                    <div class="col-sm-6 col-xxl-3">
-                        <div class="card card-full">
-                            <div class="card-body">
-                                <div class="media media-rg media-middle media-circle text-red bg-red bg-opacity-20 mb-3">
-                                    <em class="icon ni ni-youtube-fill"></em>
-                                </div>
-                                <h5 class="fs-4 fw-medium">YouTube Tags Generator</h5>
-                                <p class="small text-light">Generate SEO optimized tags/keywords for your YouTube video.</p>
-                            </div>
-                        </div><!-- .card -->
-                    </div><!-- .col -->
-                    <div class="col-sm-6 col-xxl-3">
-                        <div class="card card-full">
-                            <div class="card-body">
-                                <div
-                                    class="media media-rg media-middle media-circle text-purple bg-purple bg-opacity-20 mb-3">
-                                    <em class="icon ni ni-laptop"></em>
-                                </div>
-                                <h5 class="fs-4 fw-medium">Website Headlines/Copy</h5>
-                                <p class="small text-light">Generate professional copy for your website that converts users.
-                                </p>
-                            </div>
-                        </div><!-- .card -->
-                    </div><!-- .col -->
+                 <!-- .col -->
+                 @foreach ($templates as $item)
+    <div class="col-sm-6 col-xxl-3 filter-item blog-content">
+        <div class="card card-full shadow-none">
+            <div class="card-body">
+                <a href="{{ route('details.template', $item->id) }}">
+                    
+                    <div class="media media-rg media-middle media-circle text-primary bg-primary bg-opacity-20 mb-3">
+                        <em class="{{ $item->icon }}"></em>
+                    </div>
+
+                    <h5 class="fs-4 fw-medium">{{ $item->title }}</h5>
+                    <p class="small text-light line-clamp-2">{{ $item->description }}</p>
+
+                </a>
+            </div>
+        </div>
+    </div>
+@endforeach
+                    
                 </div><!-- .row -->
             </div><!-- .nk-block -->
 

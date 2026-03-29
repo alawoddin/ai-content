@@ -74,48 +74,6 @@
                         </ul>
                     </li>
 
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon">
-                                <em class="icon ni ni-folder-list"></em>
-                            </span>
-                            <span class="nk-menu-text">Generate Image</span>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="{{ route('generate.image') }}" class="nk-menu-link">
-                                    <span class="nk-menu-text">Generate Image</span>
-                                </a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="{{ route('all.generate.image') }}" class="nk-menu-link">
-                                    <span class="nk-menu-text">All Generate Image </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon">
-                                <em class="icon ni ni-folder-list"></em>
-                            </span>
-                            <span class="nk-menu-text">Generate Audio</span>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="{{ route('generate.audio') }}" class="nk-menu-link">
-                                    <span class="nk-menu-text">Generate Audio</span>
-                                </a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="{{ route('all.generate.audio') }}" class="nk-menu-link">
-                                    <span class="nk-menu-text">All Generate Audio </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
 
 
 
@@ -199,6 +157,52 @@
                         </a>
                     </li>
 
+                     <li class="nk-menu-item has-sub">
+                        <a href="#" class="nk-menu-link nk-menu-toggle">
+                            <span class="nk-menu-icon">
+                                <em class="icon ni ni-img"></em>
+                            </span>
+                            <span class="nk-menu-text">Generate Image</span>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item">
+                                <a href="{{ route('generate.image') }}" class="nk-menu-link">
+                                    <span class="nk-menu-text">Generate Image</span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{{ route('all.generate.image') }}" class="nk-menu-link">
+                                    <span class="nk-menu-text">All Generate Image </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nk-menu-item has-sub">
+                        <a href="#" class="nk-menu-link nk-menu-toggle">
+                            <span class="nk-menu-icon">
+                               <em class="icon ni ni-mic"></em>
+                            </span>
+                            <span class="nk-menu-text">Generate Audio</span>
+                        </a>
+                        <ul class="nk-menu-sub">
+                            <li class="nk-menu-item">
+                                <a href="{{ route('generate.audio') }}" class="nk-menu-link">
+                                    <span class="nk-menu-text">Generate Audio</span>
+                                </a>
+                            </li>
+                            <li class="nk-menu-item">
+                                <a href="{{ route('all.generate.audio') }}" class="nk-menu-link">
+                                    <span class="nk-menu-text">All Generate Audio </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                    
+
 
 
 
@@ -239,7 +243,8 @@
                     $id = Auth::user()->id;
                     $profileData = App\Models\User::find($id);
                 @endphp
-                <a class="d-flex px-3 py-2 bg-primary bg-opacity-10 rounded-bottom-3" href="{{ route('admin.profile') }}">
+                <a class="d-flex px-3 py-2 bg-primary bg-opacity-10 rounded-bottom-3"
+                    href="{{ route('admin.profile') }}">
                     <div class="media-group">
                         <div class="media media-sm media-middle media-circle text-bg-primary">
                             <img
