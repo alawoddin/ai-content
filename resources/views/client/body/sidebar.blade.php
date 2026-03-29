@@ -24,7 +24,7 @@
             <div class="nk-sidebar-menu">
                 <ul class="nk-menu">
                     <li class="nk-menu-item">
-                        <a href="index.html" class="nk-menu-link">
+                        <a href="{{ route('dashboard') }}" class="nk-menu-link">
                             <span class="nk-menu-icon">
                                 <em class="icon ni ni-dashboard-fill"></em>
                             </span>
@@ -34,7 +34,8 @@
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
                             <span class="nk-menu-icon">
-                                <em class="icon ni ni-folder-list"></em>
+                                <em class="icon ni ni-user"></em>
+                                
                             </span>
                             <span class="nk-menu-text">Account</span>
                         </a>
@@ -55,7 +56,7 @@
                     <li class="nk-menu-item">
                         <a href="{{ route('user.template') }}" class="nk-menu-link">
                             <span class="nk-menu-icon">
-                                <em class="icon ni ni-user"></em>
+                              <em class="icon ni ni-home"></em>
                             </span>
                             <span class="nk-menu-text">Template</span>
                         </a>
@@ -64,7 +65,7 @@
                     <li class="nk-menu-item">
                         <a href="{{ route('user.document') }}" class="nk-menu-link">
                             <span class="nk-menu-icon">
-                                <em class="icon ni ni-user"></em>
+                                <em class="icon ni ni-folder-list"></em>
                             </span>
                             <span class="nk-menu-text">Document</span>
                         </a>
@@ -73,7 +74,7 @@
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
                             <span class="nk-menu-icon">
-                                <em class="icon ni ni-folder-list"></em>
+                               <em class="icon ni ni-img"></em>
                             </span>
                             <span class="nk-menu-text">Generate Image</span>
                         </a>
@@ -94,7 +95,7 @@
                     <li class="nk-menu-item has-sub">
                         <a href="#" class="nk-menu-link nk-menu-toggle">
                             <span class="nk-menu-icon">
-                                <em class="icon ni ni-folder-list"></em>
+                               <em class="icon ni ni-mic"></em>
                             </span>
                             <span class="nk-menu-text">Generate Audio</span>
                         </a>
@@ -186,7 +187,7 @@
                     $id = Auth::user()->id;
                     $profileData = App\Models\User::find($id);
                 @endphp
-                <a class="d-flex px-3 py-2 bg-primary bg-opacity-10 rounded-bottom-3" href="profile.html">
+                <a class="d-flex px-3 py-2 bg-primary bg-opacity-10 rounded-bottom-3" href="{{ route('user.profile') }}">
                     <div class="media-group">
                         <div class="media media-sm media-middle media-circle text-bg-primary">
                             <img
