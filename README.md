@@ -17,6 +17,8 @@ the saas web application is create for the user have mutiple choose that select 
 Admin Dashboard
 👥 User management system
 🤖 Manage AI chat assistants
+🤖 AI image Generation (OpenAI API)
+🤖 AI autio Generation (OpenAI API)
 ⚙️ Configure system settings
 📈 Monitor user activity
 🗂 Content management overview
@@ -24,6 +26,8 @@ Admin Dashboard
 User Dashboard
 🔐 Secure Authentication (Login/Register)
 🤖 AI Content Generation (OpenAI API)
+🤖 AI image Generation (OpenAI API)
+🤖 AI autio Generation (OpenAI API)
 📝 Generate blogs, articles, and text content
 📂 Save and manage generated content
 📊 User-friendly dashboard interface
