@@ -67,6 +67,12 @@ User Dashboard
 🔹 Chat Assistants Management
 ![Chat Assistant](./screenshots/chat_assistants.png)
 
+🔹 Image Generate 
+![Chat Assistant](./screenshots/gen%20image%20.png)
+
+🔹 Audio Generate 
+![Chat Assistant](./screenshots/gen%20audio%20.png)
+
 
 ## Live Demo
 [...](https://saas-project.khedmat.website/)
