@@ -51,7 +51,7 @@ Version Control: Git & GitHub
 
 
 
-![Admin Dashboard](./screenshots/admin_dashbaord.png)
+![Admin Dashboard](./screenshots/admin_dashboard.png)
 
 User Dashboard
 ![User Dashboard](./screenshots/user_dashboard.png)
